@@ -421,7 +421,10 @@
   .tg-connect h1{margin-top:24px;font-size:26px;line-height:1.35;}
   @media(min-width:640px){.tg-connect h1{font-size:30px;}}
   .tg-connect .btn{margin-top:32px;width:100%;max-width:340px;height:56px;font-size:16px;}
-  .tg-connect .note{margin-top:16px;max-width:380px;font-size:13.5px;line-height:1.5;color:var(--muted);}
+  .tg-connect .note{margin-top:12px;max-width:380px;font-size:15px;line-height:1.5;color:var(--ink-soft);}
+  .tg-connect .note.fine{margin-top:16px;font-size:13.5px;color:var(--muted);}
+  .field-hint{margin-bottom:10px;font-size:14px;line-height:1.5;color:var(--ink-soft);}
+  .icon-logo{display:inline-flex;}
 </style>
 </head>
 <body>
@@ -720,7 +723,7 @@
       1:'Где ты ведёшь блог?',
       2:'О чём твой блог?',
       3:'Кого ты хочешь привлечь?',
-      4:'Какие темы искать?',
+      4:'Что будем искать?',
       5:'На каком языке предлагать комментарии?'
     }[step];
   }
@@ -728,7 +731,7 @@
   function renderStepBody(step){
     var p = state.profile;
     if (step === 1) {
-      var opts = [['instagram','Instagram'],['tiktok','TikTok'],['both','Оба']];
+      var opts = [['instagram','Instagram'],['tiktok','TikTok'],['both','Instagram + TikTok']];
       var html = opts.map(function(o){
         var selected = p.platform === o[0];
         return '<button type="button" class="option-card' + (selected?' selected':'') + '" data-platform="' + o[0] + '">' +
@@ -739,16 +742,16 @@
       if (fields.length){
         html += '<div class="url-field">' + fields.map(function(f){
           return '<label class="field-label">' + f[1] + '</label>' +
-            '<input class="field" style="margin-bottom:12px" type="url" placeholder="https://..." data-url="' + f[0] + '" value="' + esc(p.urls[f[0]]) + '">';
+            '<input class="field" style="margin-bottom:12px" type="text" inputmode="url" autocomplete="off" placeholder="Ссылка на профиль или @юзернейм" data-url="' + f[0] + '" value="' + esc(p.urls[f[0]]) + '">';
         }).join('') + '</div>';
       }
       return html;
     }
     if (step === 2) {
-      return '<textarea class="field" rows="4" placeholder="Теннис, гольф, путешествия и жизнь в Барселоне" data-field="blogTopic">' + esc(p.blogTopic) + '</textarea>';
+      return '<p class="field-hint">Расскажи своими словами &mdash; Replydar сам разберётся.</p><textarea class="field" rows="4" placeholder="Теннис, гольф, путешествия и жизнь в Барселоне" data-field="blogTopic">' + esc(p.blogTopic) + '</textarea>';
     }
     if (step === 3) {
-      return '<textarea class="field" rows="4" placeholder="Девушки 25–35 лет, которым интересны теннис, активный lifestyle и путешествия" data-field="audience">' + esc(p.audience) + '</textarea>';
+      return '<p class="field-hint">Опиши людей, которых хочешь чаще видеть среди своей аудитории.</p><textarea class="field" rows="4" placeholder="Люди 25–35 лет, которым интересны теннис, активный образ жизни и путешествия" data-field="audience">' + esc(p.audience) + '</textarea>';
     }
     if (step === 4) {
       var chips = SUGGESTED_TOPICS.map(function(t){
@@ -762,7 +765,7 @@
       return '<div class="chip-row">' + chips + '</div>' + customHtml +
         '<div style="margin-top:20px"><label class="field-label">Свой вариант</label>' +
         '<div class="custom-topic-row"><input class="field" type="text" id="customTopicInput" placeholder="Например, йога">' +
-        '<button type="button" class="add-btn" id="addTopicBtn">Добавить</button></div></div>';
+        '<button type="button" class="add-btn" id="addTopicBtn">+ Добавить тему</button></div></div>';
     }
     if (step === 5) {
       var langs = [['ru','Русский'],['en','English'],['ru_en','Русский + English'],['other','Другой']];
@@ -791,7 +794,7 @@
       + '</div>'
       + '<h1>' + stepTitle(step) + '</h1>'
       + '<div class="ob-field" id="obStepBody">' + renderStepBody(step) + '</div>'
-      + '<button type="button" class="btn btn-primary ob-next" id="obNext"' + (valid?'':' disabled') + '>' + (step===TOTAL_STEPS?'Завершить':'Далее') + '</button>'
+      + '<button type="button" class="btn btn-primary ob-next" id="obNext"' + (valid?'':' disabled') + '>' + (step===TOTAL_STEPS?'Получить мои 5 находок':'Далее') + '</button>'
       + '<a href="#" class="ob-home" id="obHome">' + homeSvg() + 'Вернуться на главную</a>';
     var inner = document.getElementById('obInner');
     inner.innerHTML = html;
@@ -802,14 +805,15 @@
     var inner = document.getElementById('obInner');
     inner.innerHTML = ''
       + '<div class="tg-connect">'
-      +   '<span class="icon">' + radarSvg() + '</span>'
-      +   '<h1>Готово. Теперь подключи Telegram — туда придут твои первые 5 находок.</h1>'
+      +   '<span class="icon-logo"><svg width="56" height="56" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="radarGradTgScreen" cx="35%" cy="30%" r="75%"><stop offset="0%" stop-color="#6EC6F2"/><stop offset="100%" stop-color="#1B7FB3"/></radialGradient><filter id="radarShadowTgScreen" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#0F2A3A" flood-opacity="0.35"/></filter></defs><g filter="url(#radarShadowTgScreen)"><circle cx="20" cy="20" r="18" fill="url(#radarGradTgScreen)"/><circle cx="20" cy="20" r="12.5" stroke="#fff" stroke-opacity=".55" stroke-width="1.3" fill="none"/><circle cx="20" cy="20" r="7" stroke="#fff" stroke-opacity=".75" stroke-width="1.3" fill="none"/><circle cx="20" cy="20" r="2.4" fill="#fff"/><line x1="20" y1="20" x2="29" y2="11" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-opacity=".9"/><circle cx="29" cy="11" r="1.5" fill="#fff"/></g></svg></span>'
+      +   '<h1>Всё готово. Ищем, где тебе проявиться.</h1>'
+      +   '<p class="note">Подключи Telegram &mdash; туда придут первые 5 находок.</p>'
       +   '<button type="button" class="btn btn-tg" id="tgConnectBtn">' + tgPlaneSvg() + ' Получить находки в Telegram</button>'
-      +   '<p class="note">Мы откроем Telegram и свяжем твой профиль с ботом Replydar — дальше всё будет приходить туда автоматически.</p>'
+      +   '<p class="note fine">Бесплатно &middot; Без карты</p>'
       + '</div>';
     document.getElementById('tgConnectBtn').addEventListener('click', function(){
       var payload = state.profileId ? ('?start=' + encodeURIComponent(state.profileId)) : '';
-      window.open('https://t.me/replydar_bot' + payload, '_blank', 'noopener');
+      window.open('https://t.me/Replydar_bot' + payload, '_blank', 'noopener');
     });
   }
 
