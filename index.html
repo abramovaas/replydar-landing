@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Replydar — находи свою аудиторию в Reels и TikTok</title>
-<meta name="description" content="Каждый день Replydar находит 5 релевантных Reels и TikTok-видео с твоей потенциальной аудиторией и присылает их в Telegram вместе с готовыми комментариями. Первые 5 находок бесплатно.">
+<meta name="description" content="Каждый день Replydar находит 5 релевантных Reels и TikTok-видео в твоей тематике, где стоит проявиться, и присылает их в Telegram вместе с готовыми комментариями. Первые 5 находок бесплатно.">
 <meta property="og:title" content="Replydar — твой радар роста">
 <meta property="og:description" content="5 релевантных Reels и TikTok в день, с готовыми комментариями, прямо в Telegram. Первые 5 находок бесплатно.">
 <meta property="og:type" content="website">
@@ -100,19 +100,23 @@
   /* ---------- eyebrow / section heading ---------- */
   .eyebrow{
     font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;
-    color:var(--brand);margin:0 0 12px;
+    color:var(--brand);margin:0 0 8px;
   }
-  .section-title{font-size:28px;line-height:1.15;letter-spacing:-.01em;}
+  @media(min-width:640px){.eyebrow{margin:0 0 12px;}}
+  .section-title{font-size:22px;line-height:1.2;letter-spacing:-.01em;}
   @media(min-width:640px){.section-title{font-size:36px;}}
-  .section-desc{margin-top:16px;font-size:16px;line-height:1.6;color:var(--ink-soft);max-width:560px;}
+  .section-desc{margin-top:12px;font-size:14.5px;line-height:1.6;color:var(--ink-soft);max-width:560px;}
+  @media(min-width:640px){.section-desc{margin-top:16px;font-size:16px;}}
   .center{text-align:center;}
   .center .section-desc{margin-left:auto;margin-right:auto;}
 
-  section{padding:64px 0;}
+  section{padding:40px 0;}
   @media(min-width:640px){section{padding:80px 0;}}
+  section.trial-section{padding:32px 0;}
+  @media(min-width:640px){section.trial-section{padding:80px 0;}}
 
   /* ---------- hero ---------- */
-  .hero{position:relative;overflow:hidden;padding-top:40px;padding-bottom:56px;}
+  .hero{position:relative;overflow:hidden;padding-top:32px;padding-bottom:40px;}
   @media(min-width:640px){.hero{padding-top:56px;padding-bottom:64px;}}
   .hero-rings{
     position:absolute;pointer-events:none;right:-160px;top:-128px;
@@ -124,21 +128,22 @@
   .hero-rings::before{inset:70px;}
   .hero-rings::after{inset:140px;}
   .hero-grid{
-    position:relative;display:grid;gap:40px;align-items:center;
+    position:relative;display:grid;gap:32px;align-items:center;
   }
   @media(min-width:1024px){.hero-grid{grid-template-columns:1.05fr .95fr;gap:40px;}}
   .hero-pill{
     display:inline-flex;align-items:center;gap:6px;border-radius:999px;
     border:1px solid var(--border);background:#fff;padding:6px 12px;
-    font-size:13px;font-weight:500;color:var(--ink-soft);margin-bottom:20px;
+    font-size:13px;font-weight:500;color:var(--ink-soft);margin-bottom:16px;
   }
   .hero-pill svg{color:var(--brand);}
-  .hero h1{font-size:34px;line-height:1.12;letter-spacing:-.01em;}
+  .hero h1{font-size:27px;line-height:1.16;letter-spacing:-.01em;}
   @media(min-width:640px){.hero h1{font-size:46px;}}
   @media(min-width:1024px){.hero h1{font-size:50px;}}
-  .hero p.lede{margin-top:24px;max-width:520px;font-size:17px;line-height:1.6;color:var(--ink-soft);}
-  @media(min-width:640px){.hero p.lede{font-size:18px;}}
-  .hero-cta{margin-top:32px;}
+  .hero p.lede{margin-top:16px;max-width:520px;font-size:15.5px;line-height:1.6;color:var(--ink-soft);}
+  @media(min-width:640px){.hero p.lede{margin-top:24px;font-size:18px;}}
+  .hero-cta{margin-top:24px;}
+  @media(min-width:640px){.hero-cta{margin-top:32px;}}
   .hero-fine{margin-top:12px;font-size:13.5px;color:var(--muted);}
 
   .phone-wrap{position:relative;margin:0 auto;width:100%;max-width:380px;}
@@ -187,55 +192,68 @@
   .opp-open{width:100%;margin-top:14px;height:40px;font-size:13.5px;border-radius:999px;}
 
   /* ---------- how it works ---------- */
-  .steps-grid{margin-top:40px;display:grid;gap:24px;}
-  @media(min-width:640px){.steps-grid{grid-template-columns:repeat(3,1fr);gap:32px;}}
-  .step-card{border-radius:var(--radius-lg);border:1px solid var(--border-soft);background:#fff;padding:24px;}
+  .steps-grid{margin-top:24px;display:grid;gap:12px;}
+  @media(min-width:640px){.steps-grid{margin-top:40px;grid-template-columns:repeat(3,1fr);gap:32px;}}
+  .step-card{border-radius:var(--radius-lg);border:1px solid var(--border-soft);background:#fff;padding:16px;}
   @media(min-width:640px){.step-card{padding:28px;}}
-  .step-card .num{font-family:'Lora',serif;font-size:15px;color:var(--brand);}
-  .step-card h3{margin-top:12px;font-size:20px;line-height:1.3;}
-  .step-card p{margin-top:10px;font-size:14.5px;line-height:1.6;color:var(--ink-soft);}
-  .steps-note{margin-top:32px;display:flex;justify-content:center;}
+  .step-card .num{font-family:'Lora',serif;font-size:14px;color:var(--brand);}
+  @media(min-width:640px){.step-card .num{font-size:15px;}}
+  .step-card h3{margin-top:6px;font-size:17px;line-height:1.3;}
+  @media(min-width:640px){.step-card h3{margin-top:12px;font-size:20px;}}
+  .step-card p{margin-top:4px;font-size:13.5px;line-height:1.6;color:var(--ink-soft);}
+  @media(min-width:640px){.step-card p{margin-top:10px;font-size:14.5px;}}
+  .steps-note{margin-top:20px;display:flex;justify-content:center;}
+  @media(min-width:640px){.steps-note{margin-top:32px;}}
   .steps-note span{
     display:inline-flex;align-items:center;gap:8px;border-radius:999px;
-    background:var(--brand-soft);padding:8px 16px;font-size:14px;font-weight:500;color:var(--brand-dark);
+    background:var(--brand-soft);padding:8px 16px;font-size:13.5px;font-weight:500;color:var(--brand-dark);
   }
+  @media(min-width:640px){.steps-note span{font-size:14px;}}
 
   /* ---------- value prop ---------- */
-  .value-grid{display:grid;gap:48px;align-items:center;}
+  .value-grid{display:grid;gap:24px;align-items:center;}
   @media(min-width:1024px){.value-grid{grid-template-columns:1fr 1fr;gap:64px;}}
-  .decisions-card{border-radius:var(--radius-lg);border:1px solid var(--border-soft);background:#fff;padding:28px;}
+  .decisions-card{border-radius:var(--radius-lg);border:1px solid var(--border-soft);background:#fff;padding:20px;}
   @media(min-width:640px){.decisions-card{padding:32px;}}
-  .decisions-card>p{font-size:15px;font-weight:600;}
-  .decisions-card ul{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-direction:column;gap:14px;}
+  .decisions-card>p{font-size:14px;font-weight:600;}
+  @media(min-width:640px){.decisions-card>p{font-size:15px;}}
+  .decisions-card ul{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-direction:column;gap:8px;}
+  @media(min-width:640px){.decisions-card ul{margin-top:16px;gap:14px;}}
   .decisions-card li{display:flex;align-items:flex-start;gap:12px;}
   .tick{
     flex-shrink:0;display:flex;align-items:center;justify-content:center;
     width:20px;height:20px;margin-top:2px;border-radius:999px;background:var(--brand-soft);color:var(--brand-dark);
   }
-  .decisions-card li span.txt{font-size:15px;line-height:1.55;color:var(--ink-soft);}
+  .decisions-card li span.txt{font-size:14px;line-height:1.55;color:var(--ink-soft);}
+  @media(min-width:640px){.decisions-card li span.txt{font-size:15px;}}
 
   /* ---------- before / after ---------- */
-  .ba-grid{margin-top:40px;display:grid;gap:24px;}
-  @media(min-width:640px){.ba-grid{grid-template-columns:1fr 1fr;gap:32px;}}
-  .ba-card{border-radius:var(--radius-lg);padding:28px;}
+  .ba-grid{margin-top:24px;display:grid;gap:12px;}
+  @media(min-width:640px){.ba-grid{margin-top:40px;grid-template-columns:1fr 1fr;gap:32px;}}
+  .ba-card{border-radius:var(--radius-lg);padding:16px;}
   @media(min-width:640px){.ba-card{padding:32px;}}
   .ba-card.without{background:var(--paper-alt);border:1px solid var(--border-soft);}
   .ba-card.with{background:rgba(228,239,231,.6);border:1px solid rgba(30,95,71,.25);}
-  .ba-label{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;}
+  .ba-label{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;}
+  @media(min-width:640px){.ba-label{font-size:13px;}}
   .ba-card.without .ba-label{color:var(--muted);}
   .ba-card.with .ba-label{color:rgba(20,63,48,.7);}
-  .ba-steps{margin-top:20px;display:flex;flex-direction:column;align-items:flex-start;gap:8px;}
-  .ba-pill{border-radius:999px;background:#fff;padding:8px 16px;font-size:14.5px;font-weight:500;color:var(--ink);}
+  .ba-steps{margin-top:12px;display:flex;flex-direction:column;align-items:flex-start;gap:4px;}
+  @media(min-width:640px){.ba-steps{margin-top:20px;gap:8px;}}
+  .ba-pill{border-radius:999px;background:#fff;padding:6px 12px;font-size:13px;font-weight:500;color:var(--ink);}
+  @media(min-width:640px){.ba-pill{padding:8px 16px;font-size:14.5px;}}
   .ba-card.with .ba-pill{box-shadow:var(--shadow-card);}
-  .ba-arrow{padding-left:12px;color:var(--muted);}
+  .ba-arrow{padding-left:10px;color:var(--muted);font-size:12px;}
+  @media(min-width:640px){.ba-arrow{padding-left:12px;font-size:16px;}}
   .ba-card.with .ba-arrow{color:var(--brand);}
-  .ba-total{margin-top:24px;font-family:'Lora',serif;font-size:26px;}
+  .ba-total{margin-top:12px;font-family:'Lora',serif;font-size:20px;}
+  @media(min-width:640px){.ba-total{margin-top:24px;font-size:26px;}}
   .ba-card.with .ba-total{color:var(--brand-dark);}
 
   /* ---------- free trial (dark panel) ---------- */
   .trial-panel{
     position:relative;overflow:hidden;border-radius:var(--radius-xl);
-    background:var(--ink);padding:48px 24px;text-align:center;
+    background:var(--ink);padding:32px 20px;text-align:center;
   }
   @media(min-width:640px){.trial-panel{padding:64px 56px;}}
   .trial-rings{
@@ -247,43 +265,49 @@
   .trial-rings::before{inset:60px;}
   .trial-rings::after{inset:120px;}
   .trial-inner{position:relative;display:flex;flex-direction:column;align-items:center;}
-  .trial-inner svg{color:rgba(255,255,255,.7);}
-  .trial-inner h2{margin-top:20px;font-size:28px;line-height:1.15;color:#fff;}
-  @media(min-width:640px){.trial-inner h2{font-size:38px;}}
-  .trial-inner p.lede{margin-top:16px;max-width:480px;font-size:16px;line-height:1.6;color:rgba(255,255,255,.7);}
+  .trial-inner svg{width:28px;height:28px;color:rgba(255,255,255,.7);}
+  @media(min-width:640px){.trial-inner svg{width:32px;height:32px;}}
+  .trial-inner h2{margin-top:12px;font-size:22px;line-height:1.2;color:#fff;}
+  @media(min-width:640px){.trial-inner h2{margin-top:20px;font-size:38px;}}
+  .trial-inner p.lede{margin-top:12px;max-width:480px;font-size:14.5px;line-height:1.6;color:rgba(255,255,255,.7);}
+  @media(min-width:640px){.trial-inner p.lede{margin-top:16px;font-size:16px;}}
   .trial-inner p.fine{margin-top:4px;font-size:13.5px;color:rgba(255,255,255,.5);}
-  .trial-inner .hero-cta{margin-top:32px;}
+  .trial-inner .hero-cta{margin-top:24px;}
+  @media(min-width:640px){.trial-inner .hero-cta{margin-top:32px;}}
 
   /* ---------- pricing ---------- */
-  .price-card{margin:40px auto 0;max-width:440px;border-radius:24px;border:1px solid var(--border-soft);background:#fff;padding:32px;}
-  @media(min-width:640px){.price-card{padding:36px;}}
+  .price-card{margin:24px auto 0;max-width:440px;border-radius:24px;border:1px solid var(--border-soft);background:#fff;padding:24px;}
+  @media(min-width:640px){.price-card{margin-top:40px;padding:36px;}}
   .price-head{display:flex;align-items:baseline;justify-content:space-between;}
   .price-note{margin-top:6px;text-align:right;font-size:12.5px;color:var(--muted);}
   .price-head .plan{font-family:'Lora',serif;font-size:22px;}
   .price-head .amount{font-family:'Lora',serif;font-size:26px;}
   .price-head .amount span{font-family:'Inter',sans-serif;font-size:15px;color:var(--muted);font-weight:400;}
-  .price-card ul{list-style:none;margin:24px 0 0;padding:0;display:flex;flex-direction:column;gap:12px;}
+  .price-card ul{list-style:none;margin:20px 0 0;padding:0;display:flex;flex-direction:column;gap:10px;}
+  @media(min-width:640px){.price-card ul{margin-top:24px;gap:12px;}}
   .price-card li{display:flex;align-items:flex-start;gap:12px;font-size:14.5px;line-height:1.55;color:var(--ink-soft);}
-  .price-card .btn{margin-top:32px;width:100%;height:52px;font-size:15px;}
+  .price-card .btn{margin-top:24px;width:100%;height:52px;font-size:15px;}
+  @media(min-width:640px){.price-card .btn{margin-top:32px;}}
 
   /* ---------- faq ---------- */
   .faq-container{max-width:760px;margin:0 auto;}
-  .faq-list{margin-top:40px;border-radius:var(--radius-lg);border:1px solid var(--border-soft);background:#fff;overflow:hidden;}
+  .faq-list{margin-top:24px;border-radius:var(--radius-lg);border:1px solid var(--border-soft);background:#fff;overflow:hidden;}
+  @media(min-width:640px){.faq-list{margin-top:40px;}}
   .faq-item{border-top:1px solid var(--border-soft);}
   .faq-item:first-child{border-top:none;}
   .faq-q{
     display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;
-    padding:20px 24px;font-size:15.5px;font-weight:500;text-align:left;
+    padding:16px 20px;font-size:14.5px;font-weight:500;text-align:left;
     background:none;border:none;color:var(--ink);
   }
-  @media(min-width:640px){.faq-q{padding:20px 28px;}}
+  @media(min-width:640px){.faq-q{padding:20px 28px;font-size:15.5px;}}
   .faq-icon{flex-shrink:0;color:var(--muted);transition:transform .2s ease;}
   .faq-item.open .faq-icon{transform:rotate(45deg);}
   .faq-a-wrap{display:grid;grid-template-rows:0fr;transition:grid-template-rows .2s ease-out;}
   .faq-item.open .faq-a-wrap{grid-template-rows:1fr;}
   .faq-a-inner{overflow:hidden;}
-  .faq-a-inner p{padding:0 24px 20px;font-size:14.5px;line-height:1.6;color:var(--ink-soft);}
-  @media(min-width:640px){.faq-a-inner p{padding:0 28px 20px;}}
+  .faq-a-inner p{padding:0 20px 16px;font-size:13.5px;line-height:1.6;color:var(--ink-soft);}
+  @media(min-width:640px){.faq-a-inner p{padding:0 28px 20px;font-size:14.5px;}}
 
   /* ---------- footer ---------- */
   .site-footer{border-top:1px solid var(--border-soft);padding:40px 0;}
@@ -427,7 +451,7 @@
             Твой радар роста
           </div>
           <h1>Твоя аудитория уже смотрит чужие Reels.<br>Replydar покажет, где её найти.</h1>
-          <p class="lede">Каждый день Replydar находит 5 свежих Reels и TikTok-видео с твоей потенциальной аудиторией и присылает их в Telegram вместе с готовыми комментариями.</p>
+          <p class="lede">Каждый день Replydar находит 5 свежих Reels и TikTok-видео в твоей тематике, где стоит проявиться, и присылает их в Telegram вместе с готовыми комментариями.</p>
           <div class="hero-cta">
             <button class="btn btn-primary btn-lg" onclick="openOnboarding()">Получить 5 находок бесплатно</button>
           </div>
@@ -554,7 +578,7 @@
       </div>
     </section>
 
-    <section>
+    <section class="trial-section">
       <div class="container">
         <div class="trial-panel">
           <div class="trial-rings" aria-hidden="true"></div>
@@ -584,7 +608,7 @@
           </div>
           <p class="price-note">Цена для первых пользователей</p>
           <ul>
-            <li><span class="tick"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.2 11.5 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>5 персональных находок каждый день</li>
+            <li><span class="tick"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.2 11.5 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>5 находок каждый день</li>
             <li><span class="tick"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.2 11.5 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Instagram Reels + TikTok</li>
             <li><span class="tick"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.2 11.5 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>2 варианта комментария для каждого видео</li>
             <li><span class="tick"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.2 11.5 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>доставка прямо в Telegram</li>
