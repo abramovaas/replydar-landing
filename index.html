@@ -206,25 +206,6 @@
   .flow-card .flow-desc{margin-top:4px;font-size:13px;line-height:1.3;color:var(--ink-soft);}
   .flow-arrow{display:flex;width:24px;flex-shrink:0;align-items:center;justify-content:center;padding-top:44px;color:var(--border);}
 
-  /* ---------- how it works ---------- */
-  .steps-grid{margin-top:24px;display:grid;gap:12px;}
-  @media(min-width:640px){.steps-grid{margin-top:40px;grid-template-columns:repeat(3,1fr);gap:32px;}}
-  .step-card{border-radius:var(--radius-lg);border:1px solid var(--border-soft);background:#fff;padding:16px;}
-  @media(min-width:640px){.step-card{padding:28px;}}
-  .step-card .num{font-family:'Lora',serif;font-size:14px;color:var(--brand);}
-  @media(min-width:640px){.step-card .num{font-size:15px;}}
-  .step-card h3{margin-top:6px;font-size:17px;line-height:1.3;}
-  @media(min-width:640px){.step-card h3{margin-top:12px;font-size:20px;}}
-  .step-card p{margin-top:4px;font-size:13.5px;line-height:1.6;color:var(--ink-soft);}
-  @media(min-width:640px){.step-card p{margin-top:10px;font-size:14.5px;}}
-  .steps-note{margin-top:20px;display:flex;justify-content:center;}
-  @media(min-width:640px){.steps-note{margin-top:32px;}}
-  .steps-note span{
-    display:inline-flex;align-items:center;gap:8px;border-radius:999px;
-    background:var(--brand-soft);padding:8px 16px;font-size:13.5px;font-weight:500;color:var(--brand-dark);
-  }
-  @media(min-width:640px){.steps-note span{font-size:14px;}}
-
   /* ---------- value prop ---------- */
   .value-grid{display:grid;gap:24px;align-items:center;}
   @media(min-width:1024px){.value-grid{grid-template-columns:1fr 1fr;gap:64px;}}
@@ -463,14 +444,14 @@
         <div>
           <div class="hero-pill">
             <svg width="14" height="14" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="15" stroke="currentColor" stroke-opacity=".18"/><circle cx="16" cy="16" r="10.5" stroke="currentColor" stroke-opacity=".32"/><circle cx="16" cy="16" r="6" stroke="currentColor" stroke-opacity=".5"/><circle cx="16" cy="16" r="2.1" fill="currentColor"/></svg>
-            Органическое продвижение без скроллинга
+            Рост без бесконечного скроллинга
           </div>
           <h1>Твоя аудитория уже смотрит чужие Reels.<br>Появись там, где она тебя заметит.</h1>
-          <p class="lede">Replydar каждый день находит 5 Reels и TikTok-видео в твоей тематике и предлагает готовые комментарии. Ты выбираешь подходящий, оставляешь его под видео — и становишься заметнее для потенциальной аудитории.</p>
+          <p class="lede">Replydar каждый день находит 5 подходящих Reels и TikTok и предлагает варианты комментариев. Ты выбираешь — и вступаешь в разговор.</p>
           <div class="hero-cta">
             <button class="btn btn-primary btn-lg" onclick="openOnboarding()">Получить 5 находок бесплатно</button>
           </div>
-          <p class="hero-fine">Без карты · Первые 5 бесплатно · Займёт пару минут</p>
+          <p class="hero-fine">Без карты · Первые 5 бесплатно</p>
         </div>
 
         <div class="phone-wrap">
@@ -489,7 +470,7 @@
             </div>
             <div class="tg-card">
               <p class="opp-title">🎾 Нашли, где проявиться</p>
-              <p class="opp-desc">Релевантный Reel про любительский теннис набирает обороты среди твоей аудитории.</p>
+              <p class="opp-desc">Релевантный Reel про любительский теннис набирает обороты в твоей тематике.</p>
               <div class="opp-why">
                 <p class="label">Почему тебе подходит</p>
                 <p>Автор говорит о любительском теннисе, а ролик активно набирает просмотры среди аудитории, похожей на твою.</p>
@@ -512,38 +493,11 @@
     <section>
       <div class="container center">
         <h2 class="section-title">Как Replydar помогает тебя заметить</h2>
-        <p class="section-desc" style="margin-left:auto;margin-right:auto;">5 находок &rarr; комментарий &rarr; новая точка контакта с аудиторией</p>
+        <p class="section-desc" style="margin-left:auto;margin-right:auto;">5 находок &rarr; комментарий &rarr; новая точка контакта</p>
       </div>
       <div class="container">
-        <div class="flow-grid"><div class="flow-card"><span class="num">1</span><span class="flow-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6" opacity=".4"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.6" opacity=".7"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/><path d="M12 12 17 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><p class="flow-title">Replydar находит</p><p class="flow-desc">релевантные Reels и TikTok</p></div><div class="flow-card"><span class="num">2</span><span class="flow-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v7a2.5 2.5 0 0 1-2.5 2.5H10l-4 3v-3H6.5A2.5 2.5 0 0 1 4 13.5v-7Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.5 10 11 12.5 16 7.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><p class="flow-title">Ты выбираешь</p><p class="flow-desc">видео и подходящий комментарий</p></div><div class="flow-card"><span class="num">3</span><span class="flow-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 4v10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 8l4-4 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.5 14v3A2.5 2.5 0 0 0 7 19.5h10a2.5 2.5 0 0 0 2.5-2.5v-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><p class="flow-title">Ты оставляешь комментарий</p><p class="flow-desc">под видео</p></div><div class="flow-card"><span class="num">4</span><span class="flow-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/></svg></span><p class="flow-title">Тебя замечает аудитория</p><p class="flow-desc">и может перейти в твой профиль</p></div></div>
-        <div class="flow-row"><div class="flow-row-item"><div class="flow-card"><span class="num">1</span><span class="flow-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6" opacity=".4"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.6" opacity=".7"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/><path d="M12 12 17 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><p class="flow-title">Replydar находит</p><p class="flow-desc">релевантные Reels и TikTok</p></div><span class="flow-arrow"><svg viewBox="0 0 16 16" fill="none"><path d="M4 3l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><div class="flow-row-item"><div class="flow-card"><span class="num">2</span><span class="flow-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v7a2.5 2.5 0 0 1-2.5 2.5H10l-4 3v-3H6.5A2.5 2.5 0 0 1 4 13.5v-7Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.5 10 11 12.5 16 7.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><p class="flow-title">Ты выбираешь</p><p class="flow-desc">видео и подходящий комментарий</p></div><span class="flow-arrow"><svg viewBox="0 0 16 16" fill="none"><path d="M4 3l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><div class="flow-row-item"><div class="flow-card"><span class="num">3</span><span class="flow-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 4v10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 8l4-4 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.5 14v3A2.5 2.5 0 0 0 7 19.5h10a2.5 2.5 0 0 0 2.5-2.5v-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><p class="flow-title">Ты оставляешь комментарий</p><p class="flow-desc">под видео</p></div><span class="flow-arrow"><svg viewBox="0 0 16 16" fill="none"><path d="M4 3l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><div class="flow-row-item"><div class="flow-card"><span class="num">4</span><span class="flow-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/></svg></span><p class="flow-title">Тебя замечает аудитория</p><p class="flow-desc">и может перейти в твой профиль</p></div></div></div>
-      </div>
-    </section>
-
-    <section id="how-it-works">
-      <div class="container center">
-        <p class="eyebrow">Как это работает</p>
-        <h2 class="section-title">От блога до первых находок — три шага</h2>
-      </div>
-      <div class="container">
-        <div class="steps-grid">
-          <div class="step-card">
-            <p class="num">01</p>
-            <h3>Расскажи о своём блоге</h3>
-            <p>Replydar узнает, о чём ты пишешь и какую аудиторию хочешь привлечь.</p>
-          </div>
-          <div class="step-card">
-            <p class="num">02</p>
-            <h3>Мы найдём, где она уже есть</h3>
-            <p>Replydar анализирует свежие Reels и TikTok в твоей тематике и выбирает самые релевантные возможности.</p>
-          </div>
-          <div class="step-card">
-            <p class="num">03</p>
-            <h3>Получай 5 находок в Telegram</h3>
-            <p>Открывай видео, выбирай предложенный комментарий или используй его как вдохновение и вступай в разговор.</p>
-          </div>
-        </div>
-        <div class="steps-note"><span>5 минут в день вместо бесконечного скроллинга</span></div>
+        <div class="flow-grid"><div class="flow-card"><span class="num">1</span><span class="flow-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6" opacity=".4"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.6" opacity=".7"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/><path d="M12 12 17 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><p class="flow-title">Replydar находит</p><p class="flow-desc">релевантные Reels и TikTok</p></div><div class="flow-card"><span class="num">2</span><span class="flow-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v7a2.5 2.5 0 0 1-2.5 2.5H10l-4 3v-3H6.5A2.5 2.5 0 0 1 4 13.5v-7Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.5 10 11 12.5 16 7.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><p class="flow-title">Ты выбираешь</p><p class="flow-desc">видео и комментарий</p></div><div class="flow-card"><span class="num">3</span><span class="flow-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 4v10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 8l4-4 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.5 14v3A2.5 2.5 0 0 0 7 19.5h10a2.5 2.5 0 0 0 2.5-2.5v-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><p class="flow-title">Ты комментируешь</p><p class="flow-desc">под видео</p></div><div class="flow-card"><span class="num">4</span><span class="flow-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/></svg></span><p class="flow-title">Тебя замечают</p><p class="flow-desc">и могут перейти в профиль</p></div></div>
+        <div class="flow-row"><div class="flow-row-item"><div class="flow-card"><span class="num">1</span><span class="flow-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6" opacity=".4"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.6" opacity=".7"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/><path d="M12 12 17 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><p class="flow-title">Replydar находит</p><p class="flow-desc">релевантные Reels и TikTok</p></div><span class="flow-arrow"><svg viewBox="0 0 16 16" fill="none"><path d="M4 3l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><div class="flow-row-item"><div class="flow-card"><span class="num">2</span><span class="flow-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v7a2.5 2.5 0 0 1-2.5 2.5H10l-4 3v-3H6.5A2.5 2.5 0 0 1 4 13.5v-7Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.5 10 11 12.5 16 7.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><p class="flow-title">Ты выбираешь</p><p class="flow-desc">видео и комментарий</p></div><span class="flow-arrow"><svg viewBox="0 0 16 16" fill="none"><path d="M4 3l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><div class="flow-row-item"><div class="flow-card"><span class="num">3</span><span class="flow-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 4v10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 8l4-4 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.5 14v3A2.5 2.5 0 0 0 7 19.5h10a2.5 2.5 0 0 0 2.5-2.5v-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><p class="flow-title">Ты комментируешь</p><p class="flow-desc">под видео</p></div><span class="flow-arrow"><svg viewBox="0 0 16 16" fill="none"><path d="M4 3l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><div class="flow-row-item"><div class="flow-card"><span class="num">4</span><span class="flow-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/></svg></span><p class="flow-title">Тебя замечают</p><p class="flow-desc">и могут перейти в профиль</p></div></div></div>
       </div>
     </section>
 
@@ -552,14 +506,13 @@
         <div>
           <p class="eyebrow">Важно понимать</p>
           <h2 class="section-title">Не бот, который спамит за тебя</h2>
-          <p class="section-desc">Replydar ничего не публикует автоматически. Он делает скучную часть работы: ищет релевантный контент и предлагает варианты комментариев.</p>
+          <p class="section-desc">Replydar ничего не публикует автоматически. Он находит подходящий контент и предлагает, что можно написать. Решение всегда за тобой.</p>
         </div>
         <div class="decisions-card">
-          <p>А решение всегда за тобой:</p>
           <ul>
             <li><span class="tick"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.2 11.5 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="txt">какое видео открыть</span></li>
             <li><span class="tick"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.2 11.5 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="txt">что написать</span></li>
-            <li><span class="tick"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.2 11.5 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="txt">стоит ли вообще вступать в разговор</span></li>
+            <li><span class="tick"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.2 11.5 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="txt">вступать ли вообще в разговор</span></li>
           </ul>
         </div>
       </div>
@@ -577,15 +530,11 @@
             <div class="ba-steps">
               <span class="ba-pill">Открыть Reels</span>
               <span class="ba-arrow">↓</span>
-              <span class="ba-pill">Скроллить</span>
+              <span class="ba-pill">Искать подходящие видео</span>
               <span class="ba-arrow">↓</span>
-              <span class="ba-pill">Скроллить ещё</span>
+              <span class="ba-pill">Придумывать комментарии</span>
               <span class="ba-arrow">↓</span>
-              <span class="ba-pill">Найти подходящий ролик</span>
-              <span class="ba-arrow">↓</span>
-              <span class="ba-pill">Придумать комментарий</span>
-              <span class="ba-arrow">↓</span>
-              <span class="ba-pill">Повторить</span>
+              <span class="ba-pill">Повторять</span>
             </div>
             <p class="ba-total">30–60 минут</p>
           </div>
@@ -611,8 +560,8 @@
           <div class="trial-inner">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="15" stroke="currentColor" stroke-opacity=".18"/><circle cx="16" cy="16" r="10.5" stroke="currentColor" stroke-opacity=".32"/><circle cx="16" cy="16" r="6" stroke="currentColor" stroke-opacity=".5"/><circle cx="16" cy="16" r="2.1" fill="currentColor"/></svg>
             <h2>Попробуй Replydar на своём блоге</h2>
-            <p class="lede">Расскажи нам, кого хочешь привлечь, и получи первые 5 персональных находок бесплатно.</p>
-            <p class="fine">Без карты</p>
+            <p class="lede">Получи первые 5 персональных находок бесплатно.</p>
+            <p class="fine">Без карты.</p>
             <div class="hero-cta">
               <button class="btn btn-primary btn-lg" onclick="openOnboarding()">Получить 5 находок бесплатно</button>
             </div>
@@ -636,9 +585,8 @@
           <ul>
             <li><span class="tick"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.2 11.5 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>5 находок каждый день</li>
             <li><span class="tick"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.2 11.5 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Instagram Reels + TikTok</li>
-            <li><span class="tick"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.2 11.5 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>2 варианта комментария для каждого видео</li>
-            <li><span class="tick"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.2 11.5 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>доставка прямо в Telegram</li>
-            <li><span class="tick"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.2 11.5 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>персонализация под тематику и аудиторию</li>
+            <li><span class="tick"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.2 11.5 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>2 варианта комментария</li>
+            <li><span class="tick"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.2 11.5 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>доставка в Telegram</li>
           </ul>
           <button class="btn btn-secondary" onclick="openOnboarding()">Получить 5 находок бесплатно</button>
         </div>
@@ -654,7 +602,7 @@
         <div class="faq-list" id="faqList">
           <div class="faq-item">
             <button type="button" class="faq-q" data-faq="0">Replydar сам оставляет комментарии?<svg class="faq-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2.5v11M2.5 8h11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
-            <div class="faq-a-wrap"><div class="faq-a-inner"><p>Нет. Replydar только находит подходящие видео и предлагает варианты комментариев. Публикация всегда остаётся за тобой.</p></div></div>
+            <div class="faq-a-wrap"><div class="faq-a-inner"><p>Нет. Replydar находит видео и предлагает комментарии — публикация всегда за тобой.</p></div></div>
           </div>
           <div class="faq-item">
             <button type="button" class="faq-q" data-faq="1">Это только для Instagram?<svg class="faq-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2.5v11M2.5 8h11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
